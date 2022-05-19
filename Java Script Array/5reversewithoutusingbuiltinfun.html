@@ -1,30 +1,15 @@
 <html>
-
 <head>
-    <title>
-    Built in function
-    </title>
+    <title>RWTUBuilt-fun</title>
 </head>
-
 <body>
 </body>
 <script>
-    var ip = [33, 44, 11, 33, 44, 555, 11, 11, 45];
-    var i = 0;
-    var j = ip.length - 1;
-    document.write("Before reverse are:")
-    ip.forEach(function (input) {
-        document.write("<br/>", input);
-    });
-    document.write("<br/>After reverse are:")
-    while (i < j) {
-        var temp = ip[i];
-        ip[i] = ip[j];
-        ip[j] = temp;
-        i++;
-        j--;
-    }
-    document.write("<br/>", ip);
-</script>
-
+    var input=[33,44,11,33,44,555,11,11,45]    
+    var reverseinput=[];
+    for(var i = input.length -1; i >= 0; i--) {
+    reverseinput.push(input[i]);
+        }
+    console.log(reverseinput);
+    </script>
 </html>

@@ -1,42 +1,19 @@
 <html>
-
 <head>
-    <title>
-        Ascending order without using built in function
-    </title>
+    <title>Ascending order without using built-in function</title>
 </head>
-
 <body>
 </body>
 <script>
-    var ip = [33, 44, 11, 33, 44, 555, 11, 11, 45];
-    var temp;
-    document.write("Before sort are:");
-    ip.forEach(function (input) {
-        document.write("<br/>", input);
-    });
-    document.write("<br/>After ascending sort are:");
-    for (var i = 0; i < ip.length; i++) {
-        for (var j = i + 1; j < ip.length; j++) {
-            if (ip[i] > ip[j]) {
-                temp = ip[i];
-                ip[i] = ip[j];
-                ip[j] = temp;
+    var Arr = [33, 44, 11, 33, 44, 555, 11, 11, 45];
+    for (var i = 1; i < Arr.length; i++)
+        for (var j = 0; j < i; j++)
+            if (Arr[i] < Arr[j]) {
+                var x = Arr[i];
+                Arr[i] = Arr[j];
+                Arr[j] = x;
             }
-        }
-    }
-    document.write("<br/>", ip);
-    document.write("<br/>After descending sort are:");
-    for (var i = 0; i < ip.length; i++) {
-        for (var j = i + 1; j < ip.length; j++) {
-            if (ip[i] < ip[j]) {
-                temp = ip[i];
-                ip[i] = ip[j];
-                ip[j] = temp;
-            }
-        }
-    }
-    document.write("<br/>", ip);
+    console.log(Arr);
 </script>
 
 </html>
